@@ -1,0 +1,130 @@
+﻿@model TakeAndDo.Models.Tender
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tender</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Region.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Region.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenderCategory.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenderCategory.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenderType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenderType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Credits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Credits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpirationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpirationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParticipationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParticipationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompletionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompletionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InitMaxContractPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InitMaxContractPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinEstimatedPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinEstimatedPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VatIncludePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VatIncludePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExtraCharge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExtraCharge)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

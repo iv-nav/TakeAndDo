@@ -1,0 +1,40 @@
+﻿@model TakeAndDo.Models.Order
+
+@{
+    ViewBag.Title = "RemoveAgent";
+}
+
+<h2>RemoveAgent</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Agent.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tender.Credits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tender.Credits)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="RemoveAgent" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", $"Edit/{Model.TenderId}")
+        </div>
+    }
+</div>

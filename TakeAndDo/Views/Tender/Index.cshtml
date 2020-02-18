@@ -1,0 +1,106 @@
+﻿@model IEnumerable<TakeAndDo.Models.Tender>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Тендеры</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            <p>Описание</p>
+        </th>
+        <th>
+            <p>Ниша</p>
+        </th>
+        <th>
+            <p>Вид</p>
+        </th>
+        <th>
+            <p>Площадка</p>
+        </th>
+        <th>
+            <p>НМЦК</p>
+        </th>
+        <th>
+            <p>Регион</p>
+        </th>
+        <th>
+            <p>Окончание подачи заявок</p>
+        </th>
+        <th>
+            <p>Дата участия</p>
+        </th>
+        @*<th>
+            <p>Срок поставки</p>
+        </th>*@
+        <th>
+            <p>МРЦ</p>
+        </th>
+        <th>
+            <p>Цена с НДС</p>
+        </th>
+        <th>
+            <p>Цена дотавки</p>
+        </th>
+        <th>
+            <p>Наценка</p>
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Credits)
+            @Html.ActionLink("Перейти >>", "RedirectByLink", new { id = item.ID })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenderCategory.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenderType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InitMaxContractPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Region.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpirationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParticipationDate)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CompletionDate)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.MinEstimatedPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VatIncludePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeliveryPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtraCharge)
+        </td>
+    </tr>
+}
+
+</table>

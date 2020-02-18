@@ -1,0 +1,15 @@
+﻿
+div.long-form-group-wrapper div.form-group{
+    margin-left: -20px;
+}
+
+div.long-form-group-wrapper input {
+    max-width: 500px;    
+}
+div.form-group-wrapper {
+    float: left;
+    width: 40%;
+}
+    div.form-group-wrapper label {
+        width:20%;
+    }
